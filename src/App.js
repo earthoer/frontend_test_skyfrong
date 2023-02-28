@@ -36,8 +36,7 @@ function App() {
     href: '/',
     title: 'Home',
   }]
-  const onSearch = (value) => console.log(value);
-  const head = ["Home","AddBook","DeleteBook","UpdateBook"]
+
 
   axios.get('http://localhost:4000/api/books').then(res=>{
     // console.log(res.data)
@@ -87,28 +86,28 @@ function App() {
   }
   return (
     
-        <div>
+        <div className='main'>
      
-        <div style={{ padding: '20px' }}>
-          <Anchor
-            direction="horizontal"
-            items={data}
-          />
-         </div>
-        {localStorage.getItem("Role")=="Admin" && 
-        <button onClick={()=> logout()}>logout</button>
-        }
-    
-    
+            <div style={{ padding: '20px' }}>
+              <Anchor
+                direction="horizontal"
+                items={data}
+              />
+            </div>
+            {localStorage.getItem("Role")=="Admin" && 
+            <button className="logout" onClick={()=> logout()}>logout</button>
+            }
+        
+        
 
-   
-        <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/AddBook" element={<AddBook/>} />
-        <Route exact path="/UpdateBook" element={<UpdateBook/>} />
-        <Route exact path="/DeleteBook" element={<DeleteBook/>} />
-        <Route exact path="/Login" element={<Login/>} />
-      </Routes>
+      
+            <Routes>
+            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/AddBook" element={<AddBook/>} />
+            <Route exact path="/UpdateBook" element={<UpdateBook/>} />
+            <Route exact path="/DeleteBook" element={<DeleteBook/>} />
+            <Route exact path="/Login" element={<Login/>} />
+          </Routes>
 
     </div>
     

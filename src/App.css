@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.main{
+  display: flex;
+  flex-flow: column;
+}
+.logout{
+  position:absolute;
+  right:1vw;
+  top:0.5vw;
+  padding:0.5vw ;
+  width: 10vw;
+ 
+  
+}

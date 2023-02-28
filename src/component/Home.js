@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import { Table } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import { Input, Space } from 'antd';
+import "./Home.css"
 const { Search } = Input;
 const Home = ()=>{
     
@@ -64,8 +65,9 @@ const Home = ()=>{
       return (
         <div>
             <Search
-                placeholder="input search text"
+                placeholder="input book name"
                 onSearch={onSearch}
+                className='Search'
                 style={{
                     width: 200,
                 }}

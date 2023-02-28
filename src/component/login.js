@@ -18,9 +18,9 @@ const Login =()=>{
                 window.location.reload()
                 alert("Login Successful ")
             }
-            else{
-                alert("UserName or Password Wrong ")
-            }
+            
+      }).catch(e=>{
+        alert("UserName or Password Wrong")
       })
     };
     
